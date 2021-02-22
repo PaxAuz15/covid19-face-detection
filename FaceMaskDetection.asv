@@ -22,8 +22,8 @@ classdef FaceMaskDetection < vision.labeler.AutomationAlgorithm
             'son satisfactorios,haga clic en Aceptar para aceptar todas las ' ...
             'etiquetas automáticas y volver al etiquetado manual. Si los ' ...
             'resultados de la automatización no son satisfactorios, haga clic ' ...
-            'en Cancelar para volver al etiquetado manual sin guardar las '...
-            'etiquetas automáticas.']};
+            'en Cancelar para volver al etiquetado manual sin guardar las ']...
+            'etiquetas automáticas.'};
     end
     
     properties
@@ -59,7 +59,7 @@ classdef FaceMaskDetection < vision.labeler.AutomationAlgorithm
         
         function settingsDialog(algObj)
             
-            disp('Ejecutando settingsDialog')
+            disp('Executing settingsDialog')
 
         end
     end
@@ -68,13 +68,13 @@ classdef FaceMaskDetection < vision.labeler.AutomationAlgorithm
 
         function initialize(algObj, I)
             
-            disp('Ejecutando initialize en el primer cuadro de imagen')
+            disp('Executing initialize on the first image frame')
 
         end
 
         function autoLabels = run(algObj, I)
             
-            disp('Ejecutando ejecutar en marco de imagen')
+            disp('Executing run on image frame')
             
             [labelCord, label] = MaskLabel(I, algObj);                
             autoLabels.Name = char(label);
@@ -86,7 +86,7 @@ classdef FaceMaskDetection < vision.labeler.AutomationAlgorithm
 
         function terminate(algObj)
             
-            disp('Ejecutando terminar')
+            disp('Executing terminate')
             
         end
     end
