@@ -1,23 +1,22 @@
 function selectedBbox = predictFace(img_rz, matfile) 
 %#codegen
 
-% This function detects the traffic signs in the image using Detection Network
-% (modified version of Yolo) and recognizes(classifies) using Recognition Network
-%
+% Esta función detecta las señales de tráfico en la imagen usando Detection Network 
+% versión modificada de Yolo) y reconoce (clasifica) usando Recognition Network%
 % Inputs :
 %
-% im            : Input test image
+% im            : Imagen de prueba de entrada
 %
 % Outputs :
 %
-% selectedBbox  : Detected bounding boxes 
-% idx           : Corresponding classes
+% selectedBbox  : Cuadros delimitadores detectados 
+% idx           : Clases correspondientes
 
 % Copyright 2017-2018 The MathWorks, Inc.
 
 coder.gpu.kernelfun;
 
-% Converting into BGR format
+% Conversión a formato BGR
 img_rz = img_rz(:,:,3:-1:1);
 img_rz = im2single(img_rz);
 
@@ -29,7 +28,7 @@ end
 
 predictions = detectionnet.predict(img_rz);%, 'executionenvironment', 'cpu');
 
-%% Convert predictions to bounding box attributes
+%% Convertir predicciones en atributos de cuadro delimitador
 classes = 1;
 num = 2;
 side = 11;
@@ -71,7 +70,7 @@ for i = 0:(side*side)-1
     end
 end
 
-%% Run Non-Maximal Suppression on the detected bounding boxess
+%% Ejecute la supresión no máxima en los cuadros delimitadores detectados
 coder.varsize('selectedBbox',[98, 4],[1 0]);
 [selectedBbox,~] = selectStrongestBbox(round(boxes),probs);
 
