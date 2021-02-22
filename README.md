@@ -1,29 +1,29 @@
-Mask Detection Demo using Deep Learning
+Demostración de detección de mascarillas usando DataSets
 =============
-<img src="/images/image1.png" width="20%" height="20%" title="Final Result" alt="Final Result"></img><br/>
+<img src="/images/image1.png" width="20%" height="20%" title="Resultado Final" alt="Resultado Final"></img><br/>
 
-**Note**
-The license for this package is available in the license.txt file. By running the COVID19_LabelMaskAutomation.mlx script, you will be downloading certain third party content which is licensed under separate license agreements.
+**Nota**
+La licencia para este paquete está disponible en el archivo license.txt. Al ejecutar la secuencia de comandos COVID19_LabelMaskAutomation.mlx, descargará cierto contenido de terceros con licencia bajo acuerdos de licencia separados.
 
-**Background**
+**Antecedentes**
 
-Coronavirus disease (COVID-19) is a new strain of disease in humans discovered in 2019 that has never been identified in the past. 
-Coronavirus is a large family of viruses that causes illness in patients ranging from common cold to advanced respiratory syndromes such as Middle East Respiratory Syndrome (MERS-COV) and Severe Acute Respiratory Syndrome (SARS-COV).
-Many people are currently affected and are being treated across the world causing a global pandemic. 
-Several countries have declared a national emergency and have quarantined millions of people. 
+La enfermedad por coronavirus (COVID-19) es una nueva cepa de enfermedad en humanos descubierta en 2019 que nunca se había identificado en el pasado.
+El coronavirus es una gran familia de virus que causa enfermedades en pacientes que van desde el resfriado común hasta síndromes respiratorios avanzados como el síndrome respiratorio de Oriente Medio (MERS-COV) y el síndrome respiratorio agudo severo (SARS-COV).
+Actualmente, muchas personas se ven afectadas y reciben tratamiento en todo el mundo, lo que provoca una pandemia mundial.
+Varios países han declarado una emergencia nacional y han puesto en cuarentena a millones de personas.
 
-To be a part of the worldwide trend, I've created a CORONA mask detection deep learning model.
-It includes semi-auto data labeling, model training, and GPU code generation for real-time inference.
-Our MathWorks Korea staffs were willing to share their selfies(Non-distributable) with masks while working from home, so I can create the dataset easily.   
-Unfortunately, the dataset is not distributable, so you need to create your own dataset for training your own model. I've included some of sample data in SampleMaskData folder.
+Para ser parte de la tendencia mundial, he creado un modelo de aprendizaje profundo de detección de máscaras CORONA.
+Incluye etiquetado de datos semiautomático, entrenamiento de modelos y generación de código GPU para inferencia en tiempo real.
+Nuestro personal de MathWorks Korea estaba dispuesto a compartir sus selfies (no distribuibles) con máscaras mientras trabajaba desde casa, para que pueda crear el conjunto de datos fácilmente.
+Desafortunadamente, el conjunto de datos no se puede distribuir, por lo que debe crear su propio conjunto de datos para entrenar su propio modelo. He incluido algunos datos de muestra en la carpeta SampleMaskData.
 
-Demo Workflow
+Flujo de Trabajo de la Demo
 -------------   
 <img src="/images/image2.png" width="70%" height="70%" title="Demo Workflow" alt="Demo Workflow"></img><br/>
-* Label image  
-  * Automated labeling with pretrained model
-  * Use image Labeler for interactive process automation
-* Train Object detection model    
+* Etiquetado de Imagenes  
+  * Etiquetado automatizado con modelo preentrenado
+  * Utilice Image Labeler para la automatización interactiva de procesos
+* Image Labeler para la automatización interactiva de procesos    
   * SSD(Single-Shot Multibox Detector)
   * YOLOv2(You Only Look Once v2)
 *  Generate CUDA mex for inference speed acceleration   
